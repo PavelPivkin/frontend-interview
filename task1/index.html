@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Тестовое задание - Frontend developer</title>
+    <link type="text/css" href="css/style.css" rel="stylesheet"/>
+    <style type="text/css">
+        .width-container {
+            width: 1200px;
+        }
+
+        .body-placeholder {
+            margin-top: 2em;
+            background: #eeeeee;
+            height: 400px;
+        }
+    </style>
+</head>
+<body id="site">
+
+<div id="container">
+    <!-- Ваш код здесь -->
+
+    <div id="header-full-width">
+        <div class="container-fluid width-container ">
+
+            <div class="site-header clearfix">
+                <a href="/" class="pull-left" id="tournament_main_logo">
+                    <img src="https://img7u3n.nagradion.ru/images/logos/logo818443133.png"
+                         style="max-height: 120px; border: none; ">
+                </a>
+
+                <div class="nav-panels pull-left" style="width: 880px">
+                    <nav class="menu-navbar ">
+                        <div class="menu-navbar__container">
+                            <div class="" id="menu-658222512">
+                                <ul class="menu-navbar__list">
+                                    <li class="menu-navbar__item   menu-navbar__item_dropdown">
+                                        <a title="О проекте" data-toggle="dropdown" href="#" class="menu-navbar__link   ">
+                                            О проекте <span class="badge "></span> <span class="caret"></span></a>
+                                        <ul class="menu-navbar__dropdown" role="menu">
+                                            <li class="menu-navbar__dropdown-item "><a class="menu-navbar__dropdown-link "
+                                                                                       href="https://xn----7sbbeg3aunt0a.xn--p1ai/page1">
+                                                Информация о проекте <span class="badge"></span></a>
+                                            </li>
+                                            <li class="menu-navbar__dropdown-item "><a class="menu-navbar__dropdown-link "
+                                                                                       href="https://xn----7sbbeg3aunt0a.xn--p1ai/documents">
+                                                Документы <span class="badge"></span></a>
+                                            </li>
+                                            <li class="menu-navbar__dropdown-item "><a class="menu-navbar__dropdown-link "
+                                                                                       href="https://xn----7sbbeg3aunt0a.xn--p1ai/organization2/lead">
+                                                Исполнительная дирекция <span class="badge"></span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-navbar__item   ">
+                                        <a title="Участники" rel="nofollow" href="" class="menu-navbar__link  ">
+                                            Участники <span class="badge "></span></a>
+                                    </li>
+                                    <li class="menu-navbar__item   ">
+                                        <a title="Новости" rel="nofollow" href="https://xn----7sbbeg3aunt0a.xn--p1ai/news"
+                                           class="menu-navbar__link  ">
+                                            Новости <span class="badge "></span></a>
+                                    </li>
+                                    <li class="menu-navbar__item   ">
+                                        <a title="Проекты" rel="nofollow" href="" class="menu-navbar__link  ">
+                                            Проекты <span class="badge "></span></a>
+                                    </li>
+                                    <li class="menu-navbar__item   ">
+                                        <a title="Медиатека" href="https://xn----7sbbeg3aunt0a.xn--p1ai/documents"
+                                           class="menu-navbar__link  ">
+                                            Медиатека <span class="badge "></span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </nav>
+
+                </div>
+                <div class="banner-text pull-left" style="width: 880px">
+
+                </div>
+
+
+                <div style="  position: absolute;right: 0;top: 0;">
+                    <div class="site-header-right">
+
+                        <div class="site-header-right__item">
+                            <a id="nn-logo" href="http://www.nagradion.ru/" target="_blank">
+                                <div>
+                                    <img src="/default_img/nn_logo_140_empty2.png">
+                                    <img src="/default_img/globe.gif" title="Система статистики Наградион"
+                                         aria-label="Система статистики Наградион"
+                                         onclick="window.location.href='http://system.nagradion.ru'; return false;"
+                                         class="globe">
+                                </div>
+                            </a>
+                        </div>
+
+
+                        <div class="nn-search site-header-right__item">
+                            <form onsubmit="return false;">
+
+
+                                <div class="ui-widget">
+                                    <input id="search" class="form-control ui-autocomplete-input" placeholder="Поиск..."
+                                           autocomplete="off">
+                                </div>
+
+                            </form>
+                        </div>
+
+                        <div class="site-header-right__item">
+                            <div class="dropdown auth-menu ">
+                                <div class="btn btn-default " data-toggle="dropdown">Вход/Регистрация <span
+                                        class="caret"></span></div>
+
+
+                                <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#" class=""
+                                           onclick="callAjax('/ajax.php?call=User.register'); return false;" rel="nofollow">Регистрация</a>
+                                    </li>
+                                    <li role="presentation">
+                                        <a role="menuitem" tabindex="-1" href="#" class=""
+                                           onclick="callAjax('/ajax.php?call=User.login&amp;back_to=http%3A%2F%2Fxn----7sbbeg3aunt0a.xn--p1ai%2F'); return false;">Войти</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="width-container body-placeholder">
+
+    </div>
+</div>
+</body>
+</html>

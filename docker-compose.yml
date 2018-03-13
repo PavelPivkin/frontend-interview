@@ -1,0 +1,9 @@
+version: '3'
+services:
+  php:
+    image: alexsakhnov/nnfrontend
+    ports:
+    - "4001:8000"
+    volumes:
+    - ../task2/assets:/usr/src/myapp/web/assets:ro
+    - ../task2/twig:/usr/src/designer/twig:ro
