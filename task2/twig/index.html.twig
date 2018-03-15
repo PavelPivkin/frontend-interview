@@ -1,13 +1,32 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    {# поместите здесь HTML-код #}
-    <div class="nn-block">
-        <div class="interview-task">
-            Здесь ваш код HTML<br/>
-            <a target="_blank" href="https://twig.symfony.com/doc/2.x/templates.html">Справка по twig тут</a>
-        </div>
-    </div>
+   {# поместите здесь HTML-код #}
+
+   {% set needHeader = 'yes' %}
+
+   {% set headliners=[
+      {'imgURL':'https://www.sportunros.ru/upload/medialibrary/files/IMG_7636__.jpg', 'alt':'фото 1', 'link':'','description':'ОБРАЩЕНИЕ Алана Абаева' }, 
+      {'imgURL':'https://www.sportunros.ru/upload/medialibrary/files/IMG_7636__.jpg', 'alt':'фото 1', 'link':'','description':'ОБРАЩЕНИЕ Алана Абаева' }, 
+      {'imgURL':'http://www.sportsovet.ru/img/gerb.png', 'alt':'фото 4', 'link':'','description':'ПОДДЕРЖКА ГОСУДАРСТВА' },
+      {'imgURL':'https://files.rzn.info/viewfiles/last/share/images/avatar/yandex.png', 'alt':'фото 4', 'link':'http://ya.ru','description':'Рабочая ссылка' } 
+      ] 
+   %}
+   {% if needHeader == 'yes'%}
+
+   <div class="header">
+      
+      {% for item in headliners %}
+      <a href="{{item.link}}" class="headline-info header__headline-info">
+         <img src="{{item.imgURL}}" class="headline-info__img" alt="{{item.alt}}"></img> 
+         <div class="headline-info__text headline-info__text_margin-left_s">
+            {{item.description}}
+         </div>            
+      </a>
+      {% endfor %}
+   </div>
+
+   {% endif %}
 {% endblock %}
 
 {% block javascripts %}
