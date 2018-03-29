@@ -1,0 +1,76 @@
+@media (min-device-width:768px) {
+   .dl-menuwrapper {
+      max-width: none;
+   }
+   .dl-trigger {
+      display: none;
+   }
+
+   .dl-menuwrapper .dl-menu {
+      position: relative;
+      color: #000;
+      opacity: 1;
+      pointer-events: auto;
+      top:0;
+   }
+
+   .dl-menuwrapper ul {
+
+      list-style: none;
+   }
+
+   .dl-menuwrapper > ul {
+      display: flex;
+      justify-content: center;
+   }
+
+   .dl-menuwrapper ul li a {
+       display: block;
+       background: #ececed;
+       padding: 15px 30px 15px 40px;
+       font-size: 14px;
+       color: #454547;
+       text-decoration: none;
+       text-transform:uppercase;
+   }
+
+   .dl-menuwrapper > ul li {
+      border-right: 1px solid #c7c8ca;   
+   }
+
+   .dl-menuwrapper li > ul li{
+      border: 1px solid #c7c8ca;
+   }  
+
+   .dl-menuwrapper li > ul li a{
+      padding: 10px;
+      text-transform: none;
+      background: #e4e4e5;
+   }   
+
+
+   /* submenu */
+
+   .dl-menuwrapper li ul{
+      position: absolute;
+      min-width: 200px;
+      display: none;
+   }
+
+
+   .dl-menuwrapper li:hover > ul{
+      display: block;
+   }   
+
+   .dl-menuwrapper li > ul li ul{
+      position: absolute;
+      right: -200px;
+      top: 0;
+   }
+
+   .dl-menuwrapper .dl-submenu .dl-back {
+      display: none;
+   }
+
+}
+

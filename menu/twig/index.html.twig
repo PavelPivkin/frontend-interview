@@ -1,0 +1,79 @@
+{% block body %}
+{% macro menu(links) %}
+    {% import _self as macro %}
+    
+    {% for link in links %}
+        <li>
+            <a href="{{ link['href'] }}">{{ link['title'] }}</a>
+            {% if not link['children']|default([]) is empty %}
+               <ul class='dl-submenu'>
+                {{ macro.menu(link['children']) }}
+               </ul>
+            {% endif %}
+        </li>
+    {% endfor %}
+        
+{% endmacro %}
+
+{% set data = [ 
+       { 'title':'one', 'href': '#',
+         'children': [
+            {'title':'one_level_2', 'href': '#'},
+            {'title':'two_level_2', 'href': '#'},
+            {'title':'three_level_2', 'href': '',
+               'children': [
+                  {'title':'one_level_3', 'href': '#'},
+                  {'title':'two_level_3', 'href': '#'}
+               ]
+            }
+         ]   
+       },
+       { 'title':'two', 'href': ''},
+       { 'title':'three', 'href': '',
+         'children': [
+            {'title':'one_level_2', 'href': '#'},
+            {'title':'two_level_2', 'href': '#'},
+            {'title':'three_level_2', 'href': '',
+               'children': [
+                  {'title':'one_level_3', 'href': '#'},
+                  {'title':'two_level_3', 'href': '#'}
+               ]
+            }
+         ]
+       },   
+      ]
+%}
+
+
+<div id="dl-menu" class="dl-menuwrapper">
+    <button type="button" class="navbar-toggle dl-trigger collapsed">
+           <span class="sr-only">Toggle navigation</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+   </button>
+   <ul class="dl-menu">
+      {{ _self.menu(data) }}
+   </ul>
+</div>
+         
+{% endblock %}
+
+{% block javascripts %}
+    {# поместите здесь тэги javascript #}
+    <script src="assets/js/modernizr.custom.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+      <script src="assets/js/jquery.dlmenu.js"></script>
+      <script>
+         $(function() {
+            $( '#dl-menu' ).dlmenu();
+         });
+      </script>
+{% endblock %}
+
+{% block stylesheets %}
+    {# поместите здесь тэги CSS #}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+      <link rel="stylesheet" type="text/css" href="assets/css/component.css" />
+      <link rel="stylesheet" type="text/css" href="assets/css/desktop/component.css" />
+{% endblock %}
